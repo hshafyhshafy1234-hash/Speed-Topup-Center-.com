@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
 <title>Speed Top Up Center - Services</title>
 
@@ -119,6 +120,64 @@ header{
   border-radius:12px;
   padding:15px;
 }
+
+  /* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px){
+
+  header{
+    font-size:18px;
+    padding:12px;
+  }
+
+  .card{
+    width:90%;
+    margin:10px auto;
+    display:block;
+    font-size:16px;
+  }
+
+  .details{
+    width:95%;
+    padding:15px;
+  }
+
+  .details-content{
+    gap:12px;
+    padding:5px;
+  }
+
+  .item{
+    min-width:220px;
+    padding:12px;
+  }
+
+  .item p{
+    font-size:14px;
+  }
+
+  .btn{
+    font-size:14px;
+    padding:8px 12px;
+  }
+
+  .nav-btns{
+    flex-direction:column;
+    gap:10px;
+  }
+
+  .nav-btns button{
+    width:100%;
+    padding:10px;
+    font-size:15px;
+  }
+
+  button[onclick*="peyment.html"],
+  button[onclick*="wa.me"]{
+    font-size:12px;
+    padding:6px 10px;
+  }
+}
+
 </style>
 </head>
 
@@ -467,6 +526,7 @@ function orderSelected(sectionBtn){
 
 </body>
 </html>
+
 
 
 
