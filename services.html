@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<button class="top-btn payment-btn" onclick="window.location.href='peyment.html'">
-Payment Details
-</button>
-<button class="top-btn proof-btn"
-onclick="window.open('https://wa.me/p/23904386635915267/94789418853','_blank')">
-View Proofs
-</button>
-
-
 <meta charset="UTF-8">
 <title>Speed Top Up Center - Services</title>
 
@@ -101,6 +92,31 @@ header{
   margin-top:20px;
   display:flex;
   justify-content:space-between;
+}
+/* FORCE FIX FOR PROOF & PAYMENT BUTTONS */
+body > button{
+  position:fixed !important;
+  top:15px !important;
+  z-index:99999 !important;
+}
+
+/* LEFT – PROOF BUTTON */
+body > button[onclick*="wa.me"]{
+  left:15px !important;
+}
+
+/* RIGHT – PAYMENT BUTTON */
+body > button[onclick*="peyment.html"]{
+  right:15px !important;
+}
+
+/* MOBILE FIX */
+@media(max-width:768px){
+  body > button{
+    top:10px !important;
+    font-size:12px !important;
+    padding:6px 10px !important;
+  }
 }
 
 
@@ -452,6 +468,7 @@ function orderSelected(sectionBtn){
 
 </body>
 </html>
+
 
 
 
