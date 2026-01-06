@@ -1,28 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <div id="fixedButtons">
-  <!-- Payment Button -->
-  <button onclick="window.location.href='peyment.html'">
-    Payment Details
-  </button>
-
-  <!-- Proof Button -->
-  <button onclick="window.open('https://wa.me/p/23904386635915267/94789418853','_blank')">
-    View Proofs
-  </button>
-</div>
-
+  
 <meta charset="UTF-8">
 <title>Speed Top Up Center - Services</title>
 
 <style>
 body, html {
-  margin:0; padding:0;
+  margin:0;
+  padding:0;
   font-family: Arial;
   color:white;
   text-align:center;
-  background:url('Screenshot (46).jpeg') no-repeat center center fixed;
+  background:url('Screenshot (46).jpeg') no-repeat center center;
   background-size:cover;
 }
 
@@ -105,49 +95,37 @@ header{
   display:flex;
   justify-content:space-between;
 }
-/* FIXED BUTTON CONTAINER */
-#fixedButtons{
-  position:fixed;
-  top:15px;
-  left:0;
-  width:100%;
-  display:flex;
-  justify-content:space-between;
-  padding:0 15px;
-  z-index:99999;
+
+/* TRUE FIXED BUTTONS */
+button[onclick*="peyment.html"],
+button[onclick*="wa.me"]{
+  position:fixed !important;
+  top:15px !important;
+  z-index:999999 !important;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  will-change: transform;
 }
 
-/* BUTTON STYLE */
-#fixedButtons button{
-  padding:8px 14px;
-  border:none;
-  border-radius:8px;
-  color:white;
-  font-size:14px;
-  cursor:pointer;
+/* LEFT & RIGHT */
+button[onclick*="wa.me"]{
+  left:15px !important;
 }
 
-/* COLORS */
-#fixedButtons button:first-child{
-  background:#2563eb; /* Payment */
-}
-
-#fixedButtons button:last-child{
-  background:#6c0202; /* Proof */
+button[onclick*="peyment.html"]{
+  right:15px !important;
 }
 
 /* MOBILE */
 @media(max-width:768px){
-  #fixedButtons{
-    top:10px;
-  }
-  #fixedButtons button{
-    font-size:12px;
-    padding:6px 10px;
+  button[onclick*="peyment.html"],
+  button[onclick*="wa.me"]{
+    top:10px !important;
+    font-size:12px !important;
+    padding:6px 10px !important;
   }
 }
-
-}
+  
 
 
 </style>
