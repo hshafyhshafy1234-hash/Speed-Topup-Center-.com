@@ -94,53 +94,73 @@ header{
   display:flex;
   justify-content:space-between;
 }
-/* MOBILE RESPONSIVE */
+/* MOBILE RESPONSIVE - App-style cards */
 @media only screen and (max-width: 768px) {
 
-  /* Main cards stack vertically */
+  /* Main cards stacked */
   #mainCards {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 15px;
+    padding: 10px;
   }
   .card {
-    width: 90%;
-    margin: 10px 0;
-    padding: 15px;
+    width: 95%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
     font-size: 16px;
   }
 
-  /* Details section */
+  /* Details section full width */
   .details {
     width: 95%;
     padding: 15px;
+    margin: 10px auto;
   }
 
-  /* Horizontal scroll becomes vertical for mobile */
+  /* Item cards stacked vertically */
   .details-content {
     display: flex;
     flex-direction: column;
     gap: 15px;
     overflow-x: visible;
   }
+
   .item {
-    min-width: auto;
     width: 100%;
-    padding: 10px;
+    border-radius: 12px;
+    text-align: center;
+    padding: 15px;
+    background: rgba(19,11,58,0.8);
   }
 
   .item img {
     width: 100%;
     height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
   }
 
-  /* Nav buttons stack vertically */
+  /* Buttons full width for easier tapping */
+  .btn {
+    width: 90%;
+    margin: 10px auto 0 auto;
+    display: block;
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  /* Nav buttons stacked */
   .nav-btns {
     flex-direction: column;
     gap: 10px;
+    margin-top: 15px;
   }
 
-  /* Scroll top button smaller on mobile */
+  /* Scroll to top button smaller */
   #scrollTopBtn {
     bottom: 20px;
     right: 20px;
@@ -148,12 +168,14 @@ header{
     font-size: 14px;
   }
 
-  /* Top fixed buttons */
+  /* Top fixed buttons adjustments */
   button[onclick*="window.location.href"], 
   button[onclick*="window.open"] {
     padding: 8px 12px;
     font-size: 12px;
   }
+}
+
 }
 
 
@@ -506,6 +528,7 @@ function orderSelected(sectionBtn){
 
 </body>
 </html>
+
 
 
 
