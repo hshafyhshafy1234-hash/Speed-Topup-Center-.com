@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <div id="fixedButtons">
+  <!-- Payment Button -->
+  <button onclick="window.location.href='peyment.html'">
+    Payment Details
+  </button>
+
+  <!-- Proof Button -->
+  <button onclick="window.open('https://wa.me/p/23904386635915267/94789418853','_blank')">
+    View Proofs
+  </button>
+</div>
+
 <meta charset="UTF-8">
 <title>Speed Top Up Center - Services</title>
 
@@ -93,30 +105,48 @@ header{
   display:flex;
   justify-content:space-between;
 }
-/* FORCE FIX FOR PROOF & PAYMENT BUTTONS */
-body > button{
-  position:fixed !important;
-  top:15px !important;
-  z-index:99999 !important;
+/* FIXED BUTTON CONTAINER */
+#fixedButtons{
+  position:fixed;
+  top:15px;
+  left:0;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  padding:0 15px;
+  z-index:99999;
 }
 
-/* LEFT – PROOF BUTTON */
-body > button[onclick*="wa.me"]{
-  left:15px !important;
+/* BUTTON STYLE */
+#fixedButtons button{
+  padding:8px 14px;
+  border:none;
+  border-radius:8px;
+  color:white;
+  font-size:14px;
+  cursor:pointer;
 }
 
-/* RIGHT – PAYMENT BUTTON */
-body > button[onclick*="peyment.html"]{
-  right:15px !important;
+/* COLORS */
+#fixedButtons button:first-child{
+  background:#2563eb; /* Payment */
 }
 
-/* MOBILE FIX */
+#fixedButtons button:last-child{
+  background:#6c0202; /* Proof */
+}
+
+/* MOBILE */
 @media(max-width:768px){
-  body > button{
-    top:10px !important;
-    font-size:12px !important;
-    padding:6px 10px !important;
+  #fixedButtons{
+    top:10px;
   }
+  #fixedButtons button{
+    font-size:12px;
+    padding:6px 10px;
+  }
+}
+
 }
 
 
@@ -468,6 +498,7 @@ function orderSelected(sectionBtn){
 
 </body>
 </html>
+
 
 
 
